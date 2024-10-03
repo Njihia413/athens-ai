@@ -14,10 +14,12 @@ export default withMT({
     extend: {
       fontFamily: {
         'baloo': ['"Baloo Da 2"', 'sans-serif'],
-        'bruno': ['"Bruno Ace"', 'sans-serif']
+        'bruno': ['"Bruno Ace"', 'sans-serif'],
+        'dm-sans': ['"DM Sans"', 'sans-serif'],
         // Add other font families as needed
       },
       backgroundImage: {
+        'initialBg': "url('/InitialBg.png')",
       }
     },
   },
