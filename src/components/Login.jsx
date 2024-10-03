@@ -2,7 +2,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import LoginForm from "./LoginForm.jsx";
-import LoginImg from "../assets/Group 1000004164.png";
+import LoginImg from "../assets/LoginImg.png";
 
 const Login = () => {
     return (
@@ -17,8 +17,7 @@ const Login = () => {
 
                     <p className="font-dm-sans font-normal text-[18px] text-[#000033B3] mt-[1rem]">
                         Don't have an account?&nbsp;
-                        <Link to="/signup" className="text-[#3A4DF199] font-medium underline hover:no-underline">Create
-                            now</Link>
+                        <Link to="/signup" className="text-[#3A4DF199] font-medium underline hover:no-underline">Create now</Link>
                     </p>
 
                     <LoginForm/>
