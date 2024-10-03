@@ -6,6 +6,7 @@ import Signup from "./Signup.jsx";
 import ResetPassword from "./ResetPassword.jsx";
 import OTPCode from "./OTPCode.jsx";
 import NewPassword from "./NewPassword.jsx";
+import Success from "./Success.jsx";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/new-password" element={<NewPassword/>}/>
           <Route path="/reset-password" element={<ResetPassword/>}/>
           <Route path="/otp" element={<OTPCode/>}/>
+          <Route path="/success" element={<Success/>}/>
         </Routes>
       </div>
   )

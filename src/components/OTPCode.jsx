@@ -43,12 +43,12 @@ const OTPCode = () => {
                                     Didn’t receive a code? Prompt in <span className="text-[#3A4DF1]">14</span> s&nbsp;
                                 </p>
 
-                                <button type="submit"
-                                        className="mt-[1rem] mb-[1rem] text-[#F7FAFC] bg-[#3A4DF1] h-14 font-dm-sans font-semibold rounded-full text-[20px] w-full px-5 py-2.5 text-center">
-                                    <div className="flex justify-center gap-2">
-                                        Submit
-                                    </div>
-                                </button>
+                                <Link
+                                    to="/new-password"
+                                    className="mt-[1rem] mb-[1rem] text-[#F7FAFC] bg-[#3A4DF1] h-14 font-dm-sans font-semibold rounded-full text-[20px] w-full px-5 py-2.5 text-center flex justify-center items-center gap-2"
+                                >
+                                    Submit
+                                </Link>
                             </form>
                         </div>
                     </div>
