@@ -314,7 +314,7 @@ function Guest() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="">
+                                            <div className="hidden md:block">
                                                 <h5 className="font-bold text-sm mb-3 text-slate-700 dark:text-slate-100">Or </h5>
                                                 <div
                                                     className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
