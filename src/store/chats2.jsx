@@ -227,49 +227,6 @@ Remember, best practices can change over time with new React features and update
 const data=[
     {
         id:'cid01',
-        title:'Center a div horizontally and vertically using react',
-        replys: [
-            {
-                from: 'human',
-                text: 'write me short joke for web development tutorial starting',
-            },
-            {
-                from: 'bot',
-                text: bot_reply_1,
-            },
-            {
-                from: 'human',
-                text: 'Display a Random Quote on Your Webpage with JavaScript',
-            },
-            {
-                from: 'bot',
-                text: bot_reply_2,
-            },
-            {
-                from: 'human',
-                text: '**/imagine** Surprise me with random cute awesome photo',
-            },
-            {
-                from: 'bot',
-                images:[
-                    {
-                        src: "/images/generated/a-modern-and-innovative-commercial-booth-in-the-middle-of-the-desert.jpg",
-                    },
-                    {
-                        src: "/images/generated/a-teeny-tiny-cute-redheaded-gremlin-girl-reaching-her-hands-into-the-air-saying-because-I-love-you.jpg",
-                    },
-                    {
-                        src: "/images/generated/cute-cat-as-calculator-macaroon-as-the-buttons-of-the-calculator-ribbon-happy-colors2.jpg",
-                    },
-                    {
-                        src: "/images/generated/cute-cat-as-calculator-macaroon-as-the-buttons-of-the-calculator-ribbon-happy-colors.jpg",
-                    },
-                ]
-            }
-        ]
-    },
-    {
-        id:'cid02',
         title:'Make an HTTP request in Javascript?',
         replys: [
             {
@@ -283,7 +240,7 @@ const data=[
         ]
     },
     {
-        id:'cid03',
+        id:'cid02',
         title:'Team card with tailwind css',
         replys: [
             {
@@ -297,7 +254,7 @@ const data=[
         ]
     },
     {
-        id:'cid04',
+        id:'cid03',
         title:'Tutorial React Best practices',
         replys: [
             {
@@ -311,7 +268,7 @@ const data=[
         ]
     },
     {
-        id:'cid05',
+        id:'cid04',
         title:'Give me 3 ideas about how to plan good New Years resolutions. Give me some that are personal ,family, and professionally-oriented.',
         replys: [
             {
@@ -325,7 +282,7 @@ const data=[
         ]
     },
     {
-        id:'cid06',
+        id:'cid05',
         title:'Resignation Letter Assistance',
         replys: [
             {

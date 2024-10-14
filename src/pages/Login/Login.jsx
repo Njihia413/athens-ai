@@ -68,6 +68,7 @@ const Login = () => {
                                             top: '60%',
                                             cursor: 'pointer'
                                         }}
+                                        className="dark:text-white"
                                         onClick={togglePasswordVisibility}
                                     />
                                 </div>
@@ -75,7 +76,7 @@ const Login = () => {
                                     <Button
                                         block
                                         type="submit"
-                                        className="text-[#F7FAFC] bg-[#3A4DF1] h-12 font-dm-sans font-semibold rounded-[40px] md:text-[20px] px-5 py-2.5 text-center"
+                                        className="text-[#F7FAFC] bg-[#3A4DF1] h-12 font-dm-sans font-semibold md:text-[20px] px-5 py-2.5 text-center"
                                     >
                                         Login
                                     </Button>

@@ -38,7 +38,7 @@ const ChatItem = ({ data, setListVisibility }) => {
 
     return (
         <li className="group flex items-center justify-stretch max-w-full relative" >
-            <Link to={`/chats?id=${data.id}`} onClick={()=> setListVisibility(false)} className={classNames({
+            <Link to={`/guest?id=${data.id}`} onClick={()=> setListVisibility(false)} className={classNames({
                 "flex gap-2 items-center px-4 py-3 w-full rounded-md  [&.active]:bg-blue-100 [&.active]:dark:bg-blue-950":true,
                 "active": data.id === id}
             )}>
@@ -129,7 +129,7 @@ function Guest() {
                                     </Link>
                                 </div>
                                 <SimpleBar ref={chatWindow} className="p-4 sm:p-7 h-full overflow-auto flex-grow">
-                                    <h4 className="font-dm-sans dark:text-white">Today</h4>
+                                    {/*<h4 className="font-dm-sans dark:text-white">Today</h4>*/}
                                     <ul className="flex flex-col -mx-4 -my-3 font-dm-sans">
                                         {chats2.map((item,index)=> {
                                             return(
@@ -157,11 +157,11 @@ function Guest() {
                                                 return(
                                                     <div key={index} className="flex flex-col py-2.5">
                                                         <div className="flex items-center gap-x-2">
-                                                            <div className="inline-flex flex-shrink-0 h-8 w-8 rounded-full overflow-hidden border-2 border-white dark:border-slate-700">
-                                                                {item.from === 'human' && <img src="/images/avatar/a.jpg" alt="" />}
-                                                                {item.from === 'bot' && <img src="/images/avatar/bots/1.jpg" alt="" />}
-                                                            </div>
-                                                            <h6 className="font-bold text-sm capitalize text-slate-600 dark:text-slate-100"> {item.from === 'human' ? 'you' : 'Scribbler.Ai'}</h6>
+                                                            {/*<div className="inline-flex flex-shrink-0 h-8 w-8 rounded-full overflow-hidden border-2 border-white dark:border-slate-700">*/}
+                                                            {/*    {item.from === 'human' && <img src="/images/avatar/a.jpg" alt="" />}*/}
+                                                            {/*    {item.from === 'bot' && <img src="/images/avatar/bots/1.jpg" alt="" />}*/}
+                                                            {/*</div>*/}
+                                                            <h6 className="font-bold text-sm capitalize text-slate-600 dark:text-slate-100"> {item.from === 'human' ? 'you' : 'Athens AI'}</h6>
                                                         </div>
                                                         {item.text && <div className="ps-10 w-full">
                                                             <div className=" max-w-full text-slate-500 dark:text-slate-300 prose-strong:dark:text-white text-sm prose prose-code:![text-shadow:none] *:max-w-xl prose-pre:!max-w-full prose-pre:!w-full prose-pre:p-0">

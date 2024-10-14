@@ -29,7 +29,7 @@ const Signup = () => {
         <Section className="flex justify-center items-center min-h-screen bg-gradient-to-br from-white dark:from-slate-950 to-blue-100 dark:to-blue-950">
             <Container>
                 <div className="flex justify-center md:-mx-3">
-                    <div className="w-full xs:w-4/5 sm:w-3/5 md:w-2/3 lg:w-2/5 xl:w-3/8 px-3">
+                    <div className="w-full xs:w-4/5 sm:w-3/5 md:w-2/3 lg:w-2/5 xl:w-3/8 px-3 pt-10 pb-10 md:pt-0 md:pb-0">
                         <div
                             className="bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 w-full p-6 pt-5">
                             <div className="mb-2">
@@ -147,6 +147,7 @@ const Signup = () => {
                                                 top: '60%',
                                                 cursor: 'pointer'
                                             }}
+                                            className="dark:text-white"
                                             onClick={togglePasswordVisibility}
                                         />
                                     </div>
@@ -172,6 +173,7 @@ const Signup = () => {
                                                 top: '60%',
                                                 cursor: 'pointer'
                                             }}
+                                            className="dark:text-white"
                                             onClick={toggleRepeatPasswordVisibility}
                                         />
                                     </div>
@@ -180,7 +182,7 @@ const Signup = () => {
                                     <Button
                                         block
                                         type="submit"
-                                        className="text-[#F7FAFC] bg-[#3A4DF1] h-12 font-dm-sans font-semibold rounded-[40px] md:text-[20px] px-5 py-2.5 text-center"
+                                        className="text-[#F7FAFC] bg-[#3A4DF1] h-12 font-dm-sans font-semibold md:text-[20px] px-5 py-2.5 text-center"
                                     >
                                         Create Account
                                     </Button>
