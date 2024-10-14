@@ -38,7 +38,7 @@ const ChatItem = ({ data, setListVisibility }) => {
 
     return (
         <li className="group flex items-center justify-stretch max-w-full relative" >
-            <Link to={`/app/templates/chatbot-s2?id=${data.id}`} onClick={()=> setListVisibility(false)} className={classNames({
+            <Link to={`/chats?id=${data.id}`} onClick={()=> setListVisibility(false)} className={classNames({
                 "flex gap-2 items-center px-4 py-3 w-full rounded-md  [&.active]:bg-blue-100 [&.active]:dark:bg-blue-950":true,
                 "active": data.id === id}
             )}>
@@ -293,24 +293,50 @@ function Guest() {
                                     :
                                     <div className="h-full relative">
                                         <div className="pt-4 pb-7">
-                                            <h2 className="font-bold text-3xl w-max pb-2 bg-gradient-to-r from-blue-600 to-pink-500 text-transparent bg-clip-text">Hello, there</h2>
+                                            <h2 className="font-bold text-3xl w-max pb-2 bg-gradient-to-r from-blue-600 to-pink-500 text-transparent bg-clip-text">Hello,</h2>
                                             <h4 className="font-bold text-2xl text-slate-600 dark:text-slate-100">What can I do for you today?</h4>
                                         </div>
                                         <div className="flex flex-col gap-6">
                                             <div className="">
                                                 <h5 className="font-bold text-sm mb-3 text-slate-700 dark:text-slate-100">Lets try</h5>
-                                                <div className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
-                                                    <div className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Plan a trip</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">I have 4 days holiday from my job so plan paris trip for me.</p>
+                                                <div
+                                                    className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
+                                                    <div
+                                                        className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Plan
+                                                            a trip</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">I
+                                                            have 4 days holiday from my job so plan paris trip for
+                                                            me.</p>
                                                     </div>
-                                                    <div className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Write Code for me</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Can you write tik tak to game fom me with react js.</p>
+                                                    <div
+                                                        className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Write
+                                                            Code for me</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Can
+                                                            you write a tiktak game for me in react js.</p>
                                                     </div>
-                                                    <div className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Article writing</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Write me an article for a react blog post.</p>
+                                                    <div
+                                                        className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Article
+                                                            writing</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Write
+                                                            me an article for a tailwind blog post.</p>
+                                                    </div>
+                                                    <div
+                                                        className="md:hidden px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Give
+                                                            me advice</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell
+                                                            me how to work with tough deadlines</p>
+                                                    </div>
+                                                    <div
+                                                        className="md:hidden px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Surprise
+                                                            Me</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Come
+                                                            up with anything that you think could put me in a good
+                                                            mood</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -319,18 +345,14 @@ function Guest() {
                                                 <div
                                                     className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
                                                     <div
-                                                          className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Generate
-                                                            Image/Map</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Map
-                                                            showing my surroundings</p>
+                                                        className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Give me advice</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell me how to work with tough deadlines</p>
                                                     </div>
                                                     <div
                                                           className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Chat
-                                                            with your Documents</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Upload
-                                                            documents to start chatting</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Surprise Me</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Come up with anything that you think could put me in a good mood</p>
                                                     </div>
                                                 </div>
                                             </div>
