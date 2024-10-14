@@ -110,7 +110,7 @@ function Guest() {
     }, [searchParams]);
     return (
         <Layout title="Chat Bot">
-            <Section className="py-5 xl:py-10 bg-gradient-to-br from-white dark:from-slate-950 to-blue-100 dark:to-blue-950 overflow-hidden">
+            <Section className="py-5 xl:py-10 bg-gradient-to-br from-white dark:from-slate-950 to-blue-100 dark:to-blue-950 overflow-hidden ">
                 <Container>
                     <div className="flex flex-wrap gap-x-8 xl:flex-nowrap min-h-[calc(100vh-theme(space.52))] max-h-[calc(100vh-theme(space.52))] max-xl:max-h-[calc(100vh-theme(space.40)-theme(space.2))] max-xl:min-h-[calc(100vh-theme(space.40)-theme(space.2))]">
                         {listVisibility &&<div onClick={()=>{ setListVisibility(false) }} className="fixed inset-0 bg-slate-950 bg-opacity-50 z-[1019] xl:hidden"></div>}
@@ -360,7 +360,7 @@ function Guest() {
                                     {/*        </div>*/}
                                     {/*    </li>*/}
                                     {/*</ul>*/}
-                                    <div className="flex items-start gap-4 mt-3">
+                                    <div className="flex items-start gap-4 xs:mb-6 sm:mb-0">
                                         <div contentEditable className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none"></div>
                                         <ButtonIcon className="bg-[#3A4DF1] text-white hover:bg-blue-800">
                                             <PaperAirplaneIcon className="h-4" />
