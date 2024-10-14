@@ -330,14 +330,6 @@ function Guest() {
                                                         <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell
                                                             me how to work with tough deadlines</p>
                                                     </div>
-                                                    <div
-                                                        className="md:hidden px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Surprise
-                                                            Me</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Come
-                                                            up with anything that you think could put me in a good
-                                                            mood</p>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div className="hidden md:block">
