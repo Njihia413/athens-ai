@@ -318,20 +318,20 @@ function Guest() {
                                                 <h5 className="font-bold text-sm mb-3 text-slate-700 dark:text-slate-100">Or </h5>
                                                 <div
                                                     className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
-                                                    <Link to="/signup"
+                                                    <div
                                                           className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                                                         <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Generate
                                                             Image/Map</h6>
                                                         <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Map
                                                             showing my surroundings</p>
-                                                    </Link>
-                                                    <Link to="/signup"
+                                                    </div>
+                                                    <div
                                                           className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                                                         <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Chat
                                                             with your Documents</h6>
                                                         <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Upload
                                                             documents to start chatting</p>
-                                                    </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -360,7 +360,7 @@ function Guest() {
                                     {/*        </div>*/}
                                     {/*    </li>*/}
                                     {/*</ul>*/}
-                                    <div className="flex items-start gap-4 xs:mb-6 sm:mb-0">
+                                    <div className="flex items-start gap-4 mt-3">
                                         <div contentEditable className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none"></div>
                                         <ButtonIcon className="bg-[#3A4DF1] text-white hover:bg-blue-800">
                                             <PaperAirplaneIcon className="h-4" />
