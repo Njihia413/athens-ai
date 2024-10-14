@@ -337,36 +337,36 @@ function Guest() {
                                         </div>
                                     </div>
                                 }
-                                {/*<div className="pt-3">*/}
-                                {/*    <ul className="flex gap-x-3">*/}
-                                {/*        <li>*/}
-                                {/*            <div className="flex">*/}
-                                {/*                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"*/}
-                                {/*                       id="gpt-4" name="language-model" defaultChecked/>*/}
-                                {/*                <label*/}
-                                {/*                    className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="gpt-4">GPT 4</label>*/}
-                                {/*            </div>*/}
-                                {/*        </li>*/}
-                                {/*        <li>*/}
-                                {/*            <div className="flex">*/}
-                                {/*                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio" id="Gemini" name="language-model" />*/}
-                                {/*                <label className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="Gemini">Gemini</label>*/}
-                                {/*            </div>*/}
-                                {/*        </li>*/}
-                                {/*        <li>*/}
-                                {/*            <div className="flex">*/}
-                                {/*                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio" id="Llama-3" name="language-model" />*/}
-                                {/*                <label className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="Llama-3">Llama 3</label>*/}
-                                {/*            </div>*/}
-                                {/*        </li>*/}
-                                {/*    </ul>*/}
+                                <div className="pt-3">
+                                    {/*<ul className="flex gap-x-3">*/}
+                                    {/*    <li>*/}
+                                    {/*        <div className="flex">*/}
+                                    {/*            <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"*/}
+                                    {/*                   id="gpt-4" name="language-model" defaultChecked/>*/}
+                                    {/*            <label*/}
+                                    {/*                className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="gpt-4">GPT 4</label>*/}
+                                    {/*        </div>*/}
+                                    {/*    </li>*/}
+                                    {/*    <li>*/}
+                                    {/*        <div className="flex">*/}
+                                    {/*            <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio" id="Gemini" name="language-model" />*/}
+                                    {/*            <label className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="Gemini">Gemini</label>*/}
+                                    {/*        </div>*/}
+                                    {/*    </li>*/}
+                                    {/*    <li>*/}
+                                    {/*        <div className="flex">*/}
+                                    {/*            <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio" id="Llama-3" name="language-model" />*/}
+                                    {/*            <label className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="Llama-3">Llama 3</label>*/}
+                                    {/*        </div>*/}
+                                    {/*    </li>*/}
+                                    {/*</ul>*/}
                                     <div className="flex items-start gap-4 mt-3">
                                         <div contentEditable className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none"></div>
                                         <ButtonIcon className="bg-[#3A4DF1] text-white hover:bg-blue-800">
                                             <PaperAirplaneIcon className="h-4" />
                                         </ButtonIcon>
                                     </div>
-                                {/*</div>*/}
+                                </div>
                             </div>
                         </div>
                     </div>
