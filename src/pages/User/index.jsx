@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef, Fragment } from "react";
 import SimpleBar from "simplebar-react";
 import classNames from "classnames";
-import Layout from "../../../layout/app";
-import Section from "../../../layout/global/Section";
-import Container from "../../../layout/global/Container";
-import { chats2 } from "../../../store";
-import { Button, ButtonIcon, Tooltip } from "../../../components";
+import Layout from "../../layout/user";
+import Section from "../../layout/global/Section";
+import Container from "../../layout/global/Container";
+import { chats2 } from "../../store";
+import { Button, ButtonIcon, Tooltip } from "../../components";
 import { PaperAirplaneIcon, ChatBubbleLeftRightIcon, EllipsisHorizontalIcon, TrashIcon, ShareIcon, PencilSquareIcon, ArrowPathRoundedSquareIcon, EyeIcon, ArrowDownTrayIcon, HandThumbDownIcon, Bars3Icon} from "@heroicons/react/24/outline";
-import { PlusCircleIcon} from "@heroicons/react/20/solid";
+import {PaperClipIcon, PlusCircleIcon} from "@heroicons/react/20/solid";
 import { Link, useSearchParams } from "react-router-dom";
 import { Menu } from "@headlessui/react";
 import { usePopper } from 'react-popper';
@@ -15,7 +15,7 @@ import Markdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Gallery, Item } from 'react-photoswipe-gallery';
-import { useTheme } from "../../../layout/provider";
+import { useTheme } from "../../layout/provider";
 
 const ChatItem = ({ data, setListVisibility }) => {
     const theme = useTheme();
@@ -74,7 +74,7 @@ const ChatItem = ({ data, setListVisibility }) => {
     )
 }
 
-function Guest() {
+const User = () => {
     const chatWindow = useRef(null);
     const theme = useTheme();
     let [searchParams] = useSearchParams();
@@ -109,7 +109,7 @@ function Guest() {
         };
     }, [searchParams]);
     return (
-        <Layout title="Guest">
+        <Layout title="User">
             <Section className="py-5 xl:py-10 bg-gradient-to-br from-white dark:from-slate-950 to-blue-100 dark:to-blue-950 overflow-hidden ">
                 <Container>
                     <div className="flex flex-wrap gap-x-8 xl:flex-nowrap min-h-[calc(100vh-theme(space.52))] max-h-[calc(100vh-theme(space.52))] max-xl:max-h-[calc(100vh-theme(space.40)-theme(space.2))] max-xl:min-h-[calc(100vh-theme(space.40)-theme(space.2))]">
@@ -137,6 +137,11 @@ function Guest() {
                                             )
                                         })}
                                     </ul>
+                                    <Button
+                                        className="bg-[#3a4df1] text-white hover:bg-blue-800 "
+                                    >
+                                        Upload Document(s)
+                                    </Button>
                                 </SimpleBar>
                             </div>
                         </div>
@@ -293,7 +298,7 @@ function Guest() {
                                     :
                                     <div className="h-full relative">
                                         <div className="pt-4 pb-7">
-                                            <h2 className="font-bold text-3xl w-max pb-2 bg-gradient-to-r from-blue-600 to-pink-500 text-transparent bg-clip-text">Hello,</h2>
+                                            <h2 className="font-bold text-3xl w-max pb-2 bg-gradient-to-r from-blue-600 to-pink-500 text-transparent bg-clip-text">Hello, Kevin</h2>
                                             <h4 className="font-bold text-2xl text-slate-600 dark:text-slate-100">What can I do for you today?</h4>
                                         </div>
                                         <div className="flex flex-col gap-6">
@@ -342,7 +347,7 @@ function Guest() {
                                                         <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell me how to work with tough deadlines</p>
                                                     </div>
                                                     <div
-                                                          className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                                                         <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Surprise Me</h6>
                                                         <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Come up with anything that you think could put me in a good mood</p>
                                                     </div>
@@ -352,39 +357,61 @@ function Guest() {
                                     </div>
                                 }
                                 <div className="pt-3">
-                                    {/*<ul className="flex gap-x-3">*/}
-                                    {/*    <li>*/}
-                                    {/*        <div className="flex">*/}
-                                    {/*            <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"*/}
-                                    {/*                   id="gpt-4" name="language-model" defaultChecked/>*/}
-                                    {/*            <label*/}
-                                    {/*                className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="gpt-4">GPT 4</label>*/}
-                                    {/*        </div>*/}
-                                    {/*    </li>*/}
-                                    {/*    <li>*/}
-                                    {/*        <div className="flex">*/}
-                                    {/*            <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio" id="Gemini" name="language-model" />*/}
-                                    {/*            <label className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="Gemini">Gemini</label>*/}
-                                    {/*        </div>*/}
-                                    {/*    </li>*/}
-                                    {/*    <li>*/}
-                                    {/*        <div className="flex">*/}
-                                    {/*            <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio" id="Llama-3" name="language-model" />*/}
-                                    {/*            <label className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all" htmlFor="Llama-3">Llama 3</label>*/}
-                                    {/*        </div>*/}
-                                    {/*    </li>*/}
-                                    {/*</ul>*/}
+                                    <ul className="flex gap-x-3">
+                                        <li>
+                                            <div className="flex">
+                                                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
+                                                       id="mistral" name="language-model" defaultChecked/>
+                                                <label
+                                                    className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
+                                                    htmlFor="mistral">Mistral</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="flex">
+                                                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
+                                                       id="Llama-3.2" name="language-model"/>
+                                                <label
+                                                    className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
+                                                    htmlFor="Llama-3">Llama-3.2</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="flex">
+                                                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
+                                                       id="gpt-4" name="language-model" />
+                                                <label
+                                                    className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
+                                                    htmlFor="gpt-4">GPT 4</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="flex">
+                                                <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
+                                                       id="Gemini" name="language-model"/>
+                                                <label
+                                                    className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
+                                                    htmlFor="Gemini">Gemini</label>
+                                            </div>
+                                        </li>
+                                    </ul>
                                     <div className="flex items-start gap-4 mt-3">
                                         <div contentEditable
-                                             className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none">
+                                             className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none"
+                                        >
                                             <span
                                                 className="text-slate-500 dark:text-slate-400">Ask Athens AI...</span>
                                         </div>
-                                        <Link to="/user">
-                                            <ButtonIcon className="bg-[#3A4DF1] text-white hover:bg-blue-800">
-                                                <PaperAirplaneIcon className="h-4" />
-                                            </ButtonIcon>
-                                        </Link>
+                                        {/*<div*/}
+                                        {/*    className=" cursor-pointer">*/}
+                                        {/*    <label className="cursor-pointer">*/}
+                                        {/*        <input type="file" className="hidden"/>*/}
+                                        {/*        <PaperClipIcon className="h-5 text-slate-500 hover:text-slate-700"/>*/}
+                                        {/*    </label>*/}
+                                        {/*</div>*/}
+                                        <ButtonIcon className="bg-[#3A4DF1] text-white hover:bg-blue-800">
+                                            <PaperAirplaneIcon className="h-4"/>
+                                        </ButtonIcon>
                                     </div>
                                 </div>
                             </div>
@@ -396,4 +423,4 @@ function Guest() {
     );
 }
 
-export default Guest;
+export default User;

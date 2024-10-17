@@ -42,6 +42,7 @@
     "react-photoswipe-gallery": "^3.0.1",
     "react-popper": "^2.3.0",
     "react-quill": "^2.0.0",
+    "react-router": "^6.27.0",
     "react-router-dom": "^6.21.1",
     "react-syntax-highlighter": "^15.5.0",
     "simplebar-react": "^3.2.4",
