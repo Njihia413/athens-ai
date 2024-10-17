@@ -24,30 +24,6 @@ const data = [
     },
     {
         id: "02",
-        name: "Cowboy hourse riding on the moon",
-        template: "Article Generator",
-        size: "430",
-        type: "text",
-        created: "April 3th 2023, 06:32 PM",
-        content: `
-        <p>Once upon a time, in a world not so far away, there lived a cowboy named Hank. Hank wasn't your ordinary cowboy; he had always dreamt of adventures that took him beyond the dusty plains of Earth's Old West. He yearned for something more, something out of this world, quite literally.</p><br>
-        <p>Hank's dreams came true when a group of visionary scientists and engineers developed a way to explore the moon, establishing a small lunar base. This new era of space exploration was filled with endless possibilities, and Hank knew he had to be a part of it.</p><br>
-        <p>One sunny morning, as the spacecraft awaited liftoff at the Kennedy Space Center, Hank, dressed in his rugged cowboy attire, strode toward the launchpad. People stared, puzzled by the sight of a cowboy amidst the scientists and astronauts, but Hank paid them no mind. He was a cowboy with a purpose – a cowboy on a mission to ride the moon.</p><br>
-        <p>The spaceship, named "Starstrider," was sleek and advanced, equipped with all the technology needed for the lunar mission. Hank had undergone extensive training to prepare for the journey, and he was as ready as he could be.</p><br>
-        <p>As the countdown reached zero, the rocket engines roared to life, and Hank felt a rush of exhilaration like never before. With a thunderous roar, the Starstrider blasted off into the sky, leaving Earth behind.</p><br>
-        <p>Days turned into weeks as the spaceship hurtled through space, and Hank got accustomed to life in zero gravity. He marveled at the breathtaking views of the Earth and the moon as they grew closer and closer. Finally, the Starstrider touched down on the lunar surface, kicking up a cloud of lunar dust.</p><br>
-        <p>Hank climbed into his spacesuit, which resembled a futuristic cowboy outfit, complete with a helmet shaped like a Stetson hat. He descended the ladder and set foot on the moon, becoming the first cowboy to ever do so.</p><br>
-        <p>The lunar landscape was unlike anything Hank had ever seen. The desolate, cratered terrain stretched out before him, bathed in the eerie glow of Earth on the horizon. But Hank wasn't deterred. He had his trusty lunar rover, which he affectionately named "Rusty."</p><br>
-        <p>Hank hopped on Rusty and began his lunar adventure. Instead of herding cattle, he collected moon rocks and conducted experiments. He rode across the dusty plains, leaving tire tracks that would become his lunar trails.</p><br>
-        <p>Every evening, Hank would park Rusty and set up camp beneath the vast, star-filled lunar sky. He'd sip coffee from a pouch, gazing out at Earth, his lonesome cowboy's heart feeling strangely at peace.</p><br>
-        <p>One day, while exploring a particularly deep crater, Hank discovered something remarkable – a cave with mysterious symbols etched into its walls. It was a lunar treasure, an ancient artifact that could rewrite history books.</p><br>
-        <p>Hank's discovery made headlines around the world, and he became a hero on Earth, a legend in his own right. But he wasn't done with the moon yet. Hank continued to explore, dreaming of building a lunar ranch where he could ride beneath Earth's watchful eye.</p><br>
-        <p>As the years passed, more cowboys and pioneers joined Hank on the moon. The lunar base expanded, and the cowboy spirit thrived on this new frontier. Hank's dream had become a reality, and he was the original cowboy who had tamed the wild lunar frontier.</p><br>
-        <p>And so, in the great cosmic tapestry of space and time, there was a cowboy who had lassoed the moon, proving that dreams could come true even in the most unexpected of places. Hank, the cowboy on the moon, became a legend, forever etching his name into the history of the final frontier.</p>
-        `,
-    },
-    {
-        id: "03",
         name: "Write a useEffect function with clean up",
         template: "Code Generator",
         size: "124",
@@ -117,7 +93,7 @@ export default MyComponent;
         `,
     },
     {
-        id: "04",
+        id: "03",
         name: "How to Build a Single-Page Application with JavaScript and React",
         template: "Article Generator",
         size: "487",
@@ -170,7 +146,7 @@ export default MyComponent;
         `,
     },
     {
-        id: "05",
+        id: "04",
         name: "10 Tips for Debugging JavaScript Code Like a Pro",
         template: "Article Generator",
         size: "356",
@@ -194,7 +170,7 @@ export default MyComponent;
         `,
     },
     {
-        id: "06",
+        id: "05",
         name: "Display a Random Quote on Your Webpage with JavaScript",
         template: "Code Generator",
         size: "212",
@@ -324,7 +300,7 @@ h1 {
         `,
     },
     {
-        id: "07",
+        id: "06",
         name: "Create a Simple JavaScript Calculator with Basic Math Operations",
         template: "Code Generator",
         size: "652",

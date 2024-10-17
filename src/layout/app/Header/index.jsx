@@ -17,7 +17,7 @@ import {
 
 import { useTheme, useThemeUpdate } from "../../provider";
 
-function Header({mobile, visibility, setVisibility, className}) {
+const Header = ({mobile, visibility, setVisibility, className}) => {
     const theme = useTheme();
     const themeUpdate = useThemeUpdate();
 

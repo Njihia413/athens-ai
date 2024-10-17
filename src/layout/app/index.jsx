@@ -26,7 +26,7 @@ function AppLayout({ title, children }) {
     return (
         <HelmetProvider>
             <Helmet>
-                <title>{`${title ? title + " - " : '' }`}</title>
+                <title>{`${title ? title + " - " : '' } Athens AI`}</title>
             </Helmet>
             <div className="flex flex-col min-h-screen overflow-x-hidden max-w-full pt-[calc(theme(space.16)+theme(space.1))]">
                 <Header mobile={mobile} visibility={menuVisibility} setVisibility={setMenuVisibility} />

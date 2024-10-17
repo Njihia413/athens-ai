@@ -39,6 +39,7 @@ const Login = () => {
                                         id="email-address"
                                         className="font-dm-sans"
                                         type="email"
+                                        defaultValue="admin@athensai.com"
                                     />
                                 </div>
                                 <div className="relative py-2">
@@ -59,6 +60,7 @@ const Login = () => {
                                         type={showPassword ? "text" : "password"}
                                         placeholder="@#*%"
                                         className="font-dm-sans"
+                                        defaultValue="12345678"
                                     />
                                     <FontAwesomeIcon
                                         icon={showPassword ? faEye : faEyeSlash}
@@ -73,13 +75,12 @@ const Login = () => {
                                     />
                                 </div>
                                 <div className="pt-3">
-                                    <Button
-                                        block
-                                        type="submit"
-                                        className="text-[#F7FAFC] bg-[#3A4DF1] h-12 font-dm-sans font-semibold md:text-[20px] px-5 py-2.5 text-center"
+                                    <Link
+                                        to="/admin/dashboard"
+                                        className="block text-[#F7FAFC] bg-[#3A4DF1] h-12 font-dm-sans font-semibold md:text-[20px] px-5 py-2.5 text-center"
                                     >
                                         Login
-                                    </Button>
+                                    </Link>
                                 </div>
                             </form>
 

@@ -10,6 +10,19 @@ import Guest from "../pages/Chat/Guest/index.jsx";
 import ForgotPassword from "../pages/ForgotPassword/ForgotPassword.jsx";
 import OTPCode from "../pages/OTP/OTPCode.jsx";
 import NewPassword from "../pages/NewPassword/NewPassword.jsx";
+import AdminDashboard from "../pages/Admin/Dashboard/index.jsx";
+import UserList from "../pages/Admin/Users/index.jsx";
+import UserEdit from "../pages/Admin/Users/Edit/index.jsx";
+import EmployeeList from "../pages/Admin/Users/UnverifiedUsers/index.jsx";
+import ManagerList from "../pages/Admin/Users/Managers/index.jsx";
+import CustomerServiceList from "../pages/Admin/Users/CustomerService/index.jsx";
+import HRList from "../pages/Admin/Users/HR/index.jsx";
+import ITSupportList from "../pages/Admin/Users/ITSupport/index.jsx";
+import Roles from "../pages/Admin/Roles/index.jsx";
+import RoleEdit from "../pages/Admin/Roles/Edit/index.jsx";
+import Models from "../pages/Admin/Models/index.jsx";
+import Documents from "../pages/Admin/Documents/index.jsx";
+import UnverifiedList from "../pages/Admin/Users/UnverifiedUsers/index.jsx";
 
 const ScrollToTop = (props) => {
     const location = useLocation();
@@ -34,6 +47,25 @@ const Router = () => {
                         <Route path="otp" element={<OTPCode />} />
                         <Route path="forgot-password" element={<ForgotPassword />} />
                         <Route path="new-password" element={<NewPassword />} />
+
+                        <Route path="admin">
+                            <Route index element={<AdminDashboard />} />
+                            <Route path="dashboard" element={<AdminDashboard />} />
+                            <Route path="users">
+                                <Route index element={<UserList />} />
+                                <Route path="edit/:userId" element={<UserEdit />} />
+                                <Route path="unverified" element={<UnverifiedList />} />
+                                <Route path="managers" element={<ManagerList />} />
+                                <Route path="customer_service" element={<CustomerServiceList />} />
+                                <Route path="hr" element={<HRList />} />
+                                <Route path="it_support" element={<ITSupportList />} />
+                            </Route>
+                            <Route path="roles" element={<Roles />} >
+                                <Route path="edit/:roleId" element={<RoleEdit />} />
+                            </Route>
+                            <Route path="models" element={<Models />} />
+                            <Route path="documents" element={<Documents />} />
+                        </Route>
                     </Route>
                 </Routes>
             </ScrollToTop>

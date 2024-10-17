@@ -19,7 +19,7 @@ const menuData = [
     { text: "Contact Us", link: "/contact" },
 ];
 
-function Menu({ mobile, className }) {
+const Menu = ({ mobile, className }) => {
     const compClass = classNames({
         "flex flex-col xl:flex-row xl:items-center gap-x-6 px-4 menu-base": true,
         [`${className}`]: className,
@@ -44,7 +44,7 @@ function Menu({ mobile, className }) {
 
 export default Menu;
 
-function MenuItem({ className, text, tag, link, sub, dropdown, divider, label, column, mobile, heading  }) {
+const MenuItem = ({ className, text, tag, link, sub, dropdown, divider, label, column, mobile, heading  }) => {
     const theme = useTheme();
 
     let currentLink = function (selector) {
@@ -189,7 +189,7 @@ function MenuItem({ className, text, tag, link, sub, dropdown, divider, label, c
     );
 }
 
-function MenuSub({ className, sub, column, mobile }) {
+const MenuSub = ({ className, sub, column, mobile }) => {
     const compClass = classNames({
         ["relative py-2"]: true,
         ["xl:grid"]: column,

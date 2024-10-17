@@ -14,10 +14,14 @@ import chats from "./chats";
 import chats2 from "./chats2";
 import auth from "./auth";
 import result from "./result"
+import roles from "./roles";
+import models from "./models.jsx";
 
 export {
     templates,
     country,
+    roles,
+    models,
     language,
     documents,
     users,
@@ -31,5 +35,6 @@ export {
     chats,
     chats2,
     auth,
-    result
+    result,
+
 };
