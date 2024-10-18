@@ -5,7 +5,7 @@ import Layout from "../../layout/user";
 import Section from "../../layout/global/Section";
 import Container from "../../layout/global/Container";
 import { chats2 } from "../../store";
-import { Button, ButtonIcon, Tooltip } from "../../components";
+import {Button, ButtonIcon, Label, Tooltip, UploadZone} from "../../components";
 import { PaperAirplaneIcon, ChatBubbleLeftRightIcon, EllipsisHorizontalIcon, TrashIcon, ShareIcon, PencilSquareIcon, ArrowPathRoundedSquareIcon, EyeIcon, ArrowDownTrayIcon, HandThumbDownIcon, Bars3Icon} from "@heroicons/react/24/outline";
 import {PaperClipIcon, PlusCircleIcon} from "@heroicons/react/20/solid";
 import { Link, useSearchParams } from "react-router-dom";
@@ -121,32 +121,43 @@ const User = () => {
                             "translate-x-full":theme.direction === 'rtl',
                             "translate-x-0":listVisibility
                         })}>
-                            <div className="flex flex-col justify-stretch  h-full xl:rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                            <div
+                                className="flex flex-col justify-stretch  h-full xl:rounded-lg bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                                 <div className="px-4 sm:px-7 pt-4 sm:pt-7">
-                                    <Link className="flex items-center gap-x-2 text-[#3A4DF1] text-sm" onClick={()=> setListVisibility(false)}>
-                                        <PlusCircleIcon className="h-4" />
+                                    <Link className="flex items-center gap-x-2 text-[#3A4DF1] text-sm"
+                                          onClick={() => setListVisibility(false)}>
+                                        <PlusCircleIcon className="h-4"/>
                                         <span className="font-dm-sans">New Conversation</span>
                                     </Link>
                                 </div>
                                 <SimpleBar ref={chatWindow} className="p-4 sm:p-7 h-full overflow-auto flex-grow">
                                     {/*<h4 className="font-dm-sans dark:text-white">Today</h4>*/}
-                                    <ul className="flex flex-col -mx-4 -my-3 font-dm-sans">
-                                        {chats2.map((item,index)=> {
-                                            return(
-                                                <ChatItem key={index} data={item} setListVisibility={setListVisibility} />
-                                            )
-                                        })}
-                                    </ul>
-                                    <Button
-                                        className="bg-[#3a4df1] text-white hover:bg-blue-800 "
-                                    >
-                                        Upload Document(s)
-                                    </Button>
+                                    {/*<ul className="flex flex-col -mx-4 -my-3 font-dm-sans">*/}
+                                    {/*    {chats2.map((item,index)=> {*/}
+                                    {/*        return(*/}
+                                    {/*            <ChatItem key={index} data={item} setListVisibility={setListVisibility} />*/}
+                                    {/*        )*/}
+                                    {/*    })}*/}
+                                    {/*</ul>*/}
+                                    <div className="w-full px-3">
+                                        <div className="py-2">
+                                            <Label
+                                                htmlFor="documentUpload"
+                                                className="mb-2"
+                                            >
+                                                Upload document(s)
+                                            </Label>
+                                            <UploadZone id="documentUpload"/>
+                                        </div>
+                                    </div>
                                 </SimpleBar>
                             </div>
                         </div>
-                        <div className="w-full xl:w-[calc(100%-theme(space.8)-360px)] max-xl:h-[calc(100vh-theme(space.40)-theme(space.2))] relative">
-                            <button onClick={()=>{ setListVisibility(!listVisibility) }}
+                        <div
+                            className="w-full xl:w-[calc(100%-theme(space.8)-360px)] max-xl:h-[calc(100vh-theme(space.40)-theme(space.2))] relative">
+                            <button onClick={() => {
+                                setListVisibility(!listVisibility)
+                            }}
                                     className={classNames({
                                         "inline-flex items-center justify-center h-8 w-8 rounded overflow-hidden transition-all text-slate-500 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 hover:dark:bg-slate-700 hover:text-slate-600 hover:dark:text-slate-200 ui-open:bg-slate-200 ui-open:dark:bg-slate-800 ui-open:text-slate-600 ui-open:dark:text-slate-200 xl:hidden absolute top-4 z-10":true,
                                         "end-0": !selectedChat,
@@ -329,7 +340,7 @@ const User = () => {
                                                             me an article for a tailwind blog post.</p>
                                                     </div>
                                                     <div
-                                                        className="md:hidden px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                                                        className="hidden px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                                                         <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Give
                                                             me advice</h6>
                                                         <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell
@@ -399,8 +410,6 @@ const User = () => {
                                         <div contentEditable
                                              className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none"
                                         >
-                                            <span
-                                                className="text-slate-500 dark:text-slate-400">Ask Athens AI...</span>
                                         </div>
                                         {/*<div*/}
                                         {/*    className=" cursor-pointer">*/}

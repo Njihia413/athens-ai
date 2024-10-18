@@ -16,7 +16,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { useTheme, useThemeUpdate } from "../../provider";
-import Profile from "../../../assets/images/Profile.png";
+import Profile from "../../../assets/images/Profile2.png";
 
 function Header({mobile, visibility, setVisibility, className}) {
     const theme = useTheme();

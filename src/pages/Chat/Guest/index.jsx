@@ -377,8 +377,6 @@ function Guest() {
                                     <div className="flex items-start gap-4 mt-3">
                                         <div contentEditable
                                              className="py-2.5 px-4 z-10 w-full rounded-md text-sm/[1.125rem] bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 placeholder:text-slate-400 placeholder:dark:text-slate-500 border border-slate-200 dark:border-slate-800 disabled:bg-slate-100 disabled:text-slate-400 focus:border-blue-200 focus:shadow-none focus:outline-none">
-                                            <span
-                                                className="text-slate-500 dark:text-slate-400">Ask Athens AI...</span>
                                         </div>
                                         <Link to="/user">
                                             <ButtonIcon className="bg-[#3A4DF1] text-white hover:bg-blue-800">
