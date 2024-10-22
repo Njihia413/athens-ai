@@ -4,6 +4,7 @@ import Section from "../../../layout/global/Section";
 import Container from "../../../layout/global/Container";
 import {Breadcrumbs, Button} from "../../../components";
 import RolesTable from "./RolesTable.jsx";
+import {Link} from "react-router-dom";
 
 const Roles = () => {
     return (
@@ -23,11 +24,11 @@ const Roles = () => {
                             />
                         </div>
                         <div className="px-3 mt-5">
-                            <Button
-                                className="bg-[#3a4df1] text-white hover:bg-blue-800"
-                            >
-                                Add New Role
-                            </Button>
+                            <Link to="/admin/roles/add">
+                                <Button className="bg-[#3a4df1] text-white hover:bg-blue-800">
+                                    Add New Role
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                     <RolesTable/>

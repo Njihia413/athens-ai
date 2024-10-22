@@ -4,6 +4,7 @@ import Section from "../../../layout/global/Section";
 import Container from "../../../layout/global/Container";
 import {Breadcrumbs, Button} from "../../../components";
 import ModelsTable from "./ModelsTable.jsx";
+import {Link} from "react-router-dom";
 
 const Models = () => {
     return (
@@ -23,11 +24,11 @@ const Models = () => {
                             />
                         </div>
                         <div className="px-3 mt-5">
-                            <Button
-                                className="bg-[#3a4df1] text-white hover:bg-blue-800"
-                            >
-                                Add New Model
-                            </Button>
+                            <Link to="/admin/models/add">
+                                <Button className="bg-[#3a4df1] text-white hover:bg-blue-800">
+                                    Add New Model
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                     <ModelsTable/>

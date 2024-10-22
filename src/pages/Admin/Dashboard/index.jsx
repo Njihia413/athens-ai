@@ -4,7 +4,6 @@ import Section from "../../../layout/global/Section";
 import Container from "../../../layout/global/Container";
 import InfoTiles from "./InfoTiles.jsx";
 import NewUsers from "./NewUsers";
-import RecentTransactions from "./RecentTransactions";
 import RecentDocument from "./RecentDocument.jsx";
 import UsageOverviewChart from "./UsageOverviewChart.jsx";
 import {Card} from "../../../components/index.jsx";

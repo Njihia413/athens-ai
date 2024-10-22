@@ -34,8 +34,7 @@ const columns = [
                         <li>
                             <ButtonIcon
                                 as="Link"
-                                // to={`/admin/roles/edit/${info.row.original.id}`}
-                                to="#"
+                                to={`/admin/models/edit/${info.row.original.id}`}
                                 circle
                                 size="sm"
                                 className="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-200 hover:bg-blue-600 hover:text-white hover:dark:bg-blue-600 hover:dark:text-white"

@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonIcon } from "../../../components/index.jsx";
-import { documents } from "../../../store/index.jsx";
+import {documents, templates} from "../../../store/index.jsx";
 import { PencilIcon, TrashIcon} from "@heroicons/react/24/outline";
 import  DataTable  from "../../../components/Datatable/index.jsx";
 
@@ -10,11 +10,16 @@ const columnHelper = createColumnHelper();
 
 const columns = [
     columnHelper.accessor("name", {
-        header: (info) => "Document Name",
+        header: (info) => "Datasource Name",
         cell: ({ row }) => {
+            const icon = templates.filter(function (template) {
+                return template.name.includes(row.original.template);
+            });
+
             return (
                 <div className="flex items-center">
-                    <div>
+                    <span className="h-6 w-6 block">{icon[0].icon}</span>
+                    <div className="ms-3">
                         <span className="block text-slate-600 dark:text-slate-200 font-bold text-xs mb-1">
                             {row.original.name}
                         </span>
@@ -59,7 +64,7 @@ const columns = [
     }),
 ];
 
-const DocumentsTable = () => {
+const DatasourcesTable = () => {
 
     return (
         <>
@@ -68,4 +73,4 @@ const DocumentsTable = () => {
     );
 }
 
-export default DocumentsTable;
+export default DatasourcesTable;

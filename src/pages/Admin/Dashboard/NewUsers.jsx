@@ -23,42 +23,59 @@ function NewUsers() {
                 <div className="overflow-x-auto scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-600 lg:scrollbar-none">
                     <table className="table-auto w-full text-sm border-t border-slate-200 dark:border-slate-800 border-collapse">
                         <thead className="text-slate-600 dark:text-white">
-                            <tr>
-                                <th className="text-start px-5 py-2">
-                                    Name
-                                </th>
-                                <th className="text-start px-5 py-2">
-                                    Joined At
-                                </th>
-                                <th className="text-start px-5 py-2">Status</th>
-                                <th className="sticky end-0 bg-white dark:bg-slate-950"></th>
-                            </tr>
+                        <tr>
+                            <th className="text-start px-5 py-2">
+                                First Name
+                            </th>
+                            <th className="text-start px-5 py-2">
+                                Last Name
+                            </th>
+                            <th className="text-start px-5 py-2">
+                                Last Login
+                            </th>
+                            <th className="text-start px-5 py-2">Status</th>
+                            <th className="sticky end-0 bg-white dark:bg-slate-950"></th>
+                        </tr>
                         </thead>
                         <tbody>
-                            {users.length ? (
-                                users.slice(0, 3).map((item, index) => {
+                        {users.length ? (
+                            users.slice(0, 3).map((item, index) => {
                                     return (
                                         <tr key={index}>
                                             <td className="px-5 py-3 border-t border-slate-200 dark:border-slate-800">
                                                 <div className="flex items-center">
                                                     <div className="">
-                                                        <span className="block text-slate-600 dark:text-white font-bold text-xs">
-                                                            {item.name}
+                                                        <span
+                                                            className="block text-slate-600 dark:text-white font-bold text-xs">
+                                                            {item.firstName}
                                                         </span>
-                                                        <span className="block text-slate-500 dark:text-slate-300 text-[11px] font-medium">
-                                                            {item.email}
+                                                        {/*<span*/}
+                                                        {/*    className="block text-slate-500 dark:text-slate-300 text-[11px] font-medium">*/}
+                                                        {/*    {item.email}*/}
+                                                        {/*</span>*/}
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="px-5 py-3 border-t border-slate-200 dark:border-slate-800">
+                                                <div className="flex items-center">
+                                                    <div className="">
+                                                        <span
+                                                            className="block text-slate-600 dark:text-white font-bold text-xs">
+                                                            {item.lastName}
                                                         </span>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td className="px-5 py-3 border-t border-slate-200 dark:border-slate-800">
-                                                <span className="block text-slate-600 dark:text-white text-xs font-bold whitespace-nowrap">
-                                                    {moment(item.joined).format(
+                                                <span
+                                                    className="block text-slate-600 dark:text-white text-xs font-bold whitespace-nowrap">
+                                                    {moment(item.lastLogin).format(
                                                         "ll"
                                                     )}
                                                 </span>
-                                                <span className="block text-slate-500 dark:text-slate-300 text-[11px] font-medium whitespace-nowrap">
-                                                    {moment(item.joined).format(
+                                                <span
+                                                    className="block text-slate-500 dark:text-slate-300 text-[11px] font-medium whitespace-nowrap">
+                                                    {moment(item.lastLogin).format(
                                                         "LT"
                                                     )}
                                                 </span>
@@ -66,12 +83,12 @@ function NewUsers() {
                                             <td className="px-5 py-3 border-t border-slate-200 dark:border-slate-800">
                                                 <span
                                                     className={`inline-flex px-2 rounded-full text-[11px] font-bold capitalize ${
-                                                        item.status == "verified"
+                                                        item.status == "active"
                                                             ? "bg-emerald-100 dark:bg-emerald-950 text-emerald-500"
                                                             : item.status ==
-                                                              "unverified"
-                                                            ? "bg-rose-100 dark:bg-rose-950 text-rose-500"
-                                                            : "text-slate-500 dark:text-slate-300 bg-slate-100 dark:bg-slate-900"
+                                                            "inactive"
+                                                                ? "bg-rose-100 dark:bg-rose-950 text-rose-500"
+                                                                : "text-slate-500 dark:text-slate-300 bg-slate-100 dark:bg-slate-900"
                                                     }`}
                                                 >
                                                     {item.status}
@@ -98,32 +115,32 @@ function NewUsers() {
                                                             size="sm"
                                                             className="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-white hover:bg-blue-600 hover:dark:bg-blue-600 hover:text-white"
                                                         >
-                                                            <EyeIcon className="h-3 w-3" />
+                                                            <EyeIcon className="h-3 w-3"/>
                                                         </ButtonIcon>
                                                     </li>
                                                 </ul>
                                             </td>
                                         </tr>
                                     );
-                                })
-                            ) : (
-                                <tr>
-                                    <td
-                                        className="px-5 py-8 border-t text-center"
-                                        colSpan={4}
-                                    >
+                            })
+                        ) : (
+                            <tr>
+                                <td
+                                    className="px-5 py-8 border-t text-center"
+                                    colSpan={4}
+                                >
                                         <span className="block text-slate-500 dark:text-slate-300 mb-3">
                                             There is no document to show
                                         </span>
-                                        <Button
-                                            as="Link"
-                                            to="/templates"
-                                            className="bg-blue-600 text-white hover:bg-blue-800"
-                                        >
-                                            Create New
-                                        </Button>
-                                    </td>
-                                </tr>
+                                    <Button
+                                        as="Link"
+                                        to="/templates"
+                                        className="bg-blue-600 text-white hover:bg-blue-800"
+                                    >
+                                        Create New
+                                    </Button>
+                                </td>
+                            </tr>
                             )}
                         </tbody>
                     </table>

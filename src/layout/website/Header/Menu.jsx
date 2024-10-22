@@ -7,8 +7,8 @@ import getParents from "../../../utilities/getParents";
 import { useTheme } from "../../provider";
 
 const menuData = [
-    { 
-        text: "Landing", 
+    {
+        text: "Landing",
         link: "#",
         label: "2",
         sub: [
@@ -76,7 +76,7 @@ const menuData = [
             { text: "About Us", link: "/about" },
             { text: "Pricing", link: "/pricing" },
             { text: "404 Error", link: "/404" },
-            { text: "Create Account", link: "/create-account" },
+            { text: "Add Account", link: "/create-account" },
             { text: "Login", link: "/login" },
             { text: "Two Step Verify", link: "/two-step" },
             {divider: true},

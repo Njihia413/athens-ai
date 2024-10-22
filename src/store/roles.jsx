@@ -1,7 +1,7 @@
 const data = [
     {
         id: "rid1",
-        name: "Managers",
+        name: "Manager",
     },
     {
         id: "rid2",

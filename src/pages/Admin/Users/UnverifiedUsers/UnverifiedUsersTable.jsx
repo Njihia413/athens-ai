@@ -77,9 +77,9 @@ const columns = [
                 <>
                     <span
                         className={`inline-flex px-3 py-1 rounded-full text-[11px] font-bold capitalize ${
-                            info.getValue() == "verified"
+                            info.getValue() == "active"
                                 ? "bg-emerald-100 dark:bg-emerald-950 text-emerald-500"
-                                : info.getValue() == "unverified"
+                                : info.getValue() == "inactive"
                                     ? "bg-rose-100 dark:bg-rose-950 text-rose-500"
                                     : "text-slate-500 bg-slate-100 dark:bg-slate-900"
                         }`}
@@ -152,7 +152,7 @@ const columns = [
 
 const UnverifiedUsersTable = () => {
     // Filter users whose status is "unverified"
-    const employeeUsers = users.filter(user => user.status === "unverified");
+    const employeeUsers = users.filter(user => user.status === "inactive");
 
     return (
         <>

@@ -47,7 +47,7 @@ const UserEdit = () => {
     );
 
     return (
-        <Layout title={`Update - ${user.name}`}>
+        <Layout title={`Update - ${user.firstName}`}>
             <Section className="px-3 py-6">
                 <Container>
                     <div className="mb-7 flex justify-between items-center -mx-3">
@@ -61,7 +61,7 @@ const UserEdit = () => {
                                         text: "All Users",
                                         link: "/admin/users",
                                     },
-                                    { text: user.name },
+                                    { text: user.firstName + " " + user.middleName + " " + user.lastName },
                                 ]}
                             />
                         </div>
@@ -83,7 +83,7 @@ const UserEdit = () => {
                                 <span className="text-base text-slate-400 font-normal">
                                     Edit -{" "}
                                 </span>{" "}
-                                {user.name}
+                                {user.firstName} {user.middleName} {user.lastName}
                             </h2>
                         </div>
                         <div className="px-6 pt-5 pb-6 border-b border-slate-200 dark:border-slate-800">
@@ -106,14 +106,42 @@ const UserEdit = () => {
                                 <div className="w-full lg:w-1/2 xl:w-2/5 px-3">
                                     <div className="py-2">
                                         <Label
-                                            htmlFor="username"
+                                            htmlFor="firstName"
                                             className="mb-2"
                                         >
-                                            Full Name
+                                            First Name
                                         </Label>
                                         <Input
-                                            defaultValue={user.name}
-                                            id="username"
+                                            defaultValue={user.firstName}
+                                            id="firstName"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="w-full lg:w-1/2 xl:w-2/5 px-3">
+                                    <div className="py-2">
+                                        <Label
+                                            htmlFor="middleName"
+                                            className="mb-2"
+                                        >
+                                            Middle Name
+                                        </Label>
+                                        <Input
+                                            defaultValue={user.middleName}
+                                            id="middleName"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="w-full lg:w-1/2 xl:w-2/5 px-3">
+                                    <div className="py-2">
+                                        <Label
+                                            htmlFor="lastName"
+                                            className="mb-2"
+                                        >
+                                            Last Name
+                                        </Label>
+                                        <Input
+                                            defaultValue={user.lastName}
+                                            id="lastName"
                                         />
                                     </div>
                                 </div>
@@ -193,7 +221,7 @@ const UserEdit = () => {
                                     contain symbols.
                                 </p>
                                 <p className="text-xs font-bold text-slate-500 dark:text-slate-400">
-                                    Leave it empty if you don't want to change
+                                Leave it empty if you don't want to change
                                     the user's password!
                                 </p>
                             </div>
@@ -229,7 +257,7 @@ const UserEdit = () => {
                                     </div>
                                 </div>
                                 <div className="w-full px-3 pb-2 pt-4">
-                                    <Button className="bg-blue-600 text-white hover:bg-blue-800">
+                                    <Button className="bg-[#3a4df1] text-white hover:bg-blue-800">
                                         Update Profile
                                     </Button>
                                 </div>

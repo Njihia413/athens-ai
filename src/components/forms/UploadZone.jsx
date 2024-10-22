@@ -45,7 +45,7 @@ function UploadZone({text, ...props}) {
                 <input {...getInputProps()} />
                 <div className="flex flex-col items-center border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-md px-4 py-6">
                     <p className="text-sm font-medium text-slate-500 dark:text-slate-300 text-center mb-3">
-                        {text ? text : "Drag & Drop your files or"}
+                        {text ? text : "Drag & Drop files or"}
                     </p>
                     <div className="inline-flex px-2 py-1 rounded text-sm font-medium cursor-pointer bg-blue-600 text-white">
                         Browse

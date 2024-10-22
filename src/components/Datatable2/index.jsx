@@ -21,9 +21,24 @@ function DataTable({ columns, tableData }) {
         { name: 20 },
     ];
 
+    const statusSelect = [
+        { name: 'Active'},
+        { name: 'Inactive'},
+        { name: 'Archive'},
+    ]
+
+    const roleSelect = [
+        { name: 'Manager'},
+        { name: 'IT Support'},
+        { name: 'Human Resource'},
+        { name: 'Customer Service'},
+    ]
+
     const [data, setData] = useState(() => [...tableData]);
     const [globalFilter, setGlobalFilter] = useState("");
     const [selected, setSelected] = useState(pageSizeSelect[0]);
+    const [selectedStatus, setSelectedStatus] = useState(statusSelect[0]);
+    const [selectedRole, setSelectedRole] = useState(roleSelect[0]);
 
     const table = useReactTable({
         data,
@@ -52,12 +67,30 @@ function DataTable({ columns, tableData }) {
         <>
             <Card>
                 <div className="px-5 py-5 flex gap-3 items-center ">
-                    <div className="w-full xs:w-64">
+                    <div className="w-full xs:w-44">
                         <Input
                             value={globalFilter}
                             onChange={handleFilterChange}
                             placeholder="Search all columns..."
                         />
+                    </div>
+                    <div className="flex items-center gap-x-3">
+                        <div className="w-24 xs:w-20">
+                            <Select
+                                selected={selectedStatus}
+                                options={statusSelect}
+                                onChange={setSelectedStatus} // Set the selected status
+                            />
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-x-3">
+                        <div className="w-auto xs:w-32">
+                            <Select
+                                selected={selectedRole}
+                                options={roleSelect}
+                                onChange={selectedRole} // Set the selected role
+                            />
+                        </div>
                     </div>
                     <div className="flex items-center ml-auto gap-x-3">
                         <div className="text-slate-500 dark:text-slate-300 text-sm hidden xs:block">

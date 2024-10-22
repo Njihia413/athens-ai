@@ -26,44 +26,44 @@ const menuData = [
     {
         icon: <Person />,
         text: "Users",
-        link: "/admin",
-        sub: [
-            {
-                text:"All Users",
-                link:"/admin/users"
-            },
-            {
-                text:"Unverified Users",
-                link:"/admin/users/unverified"
-            },
-            {
-                text:"Managers",
-                link:"/admin/users/managers"
-            },
-            {
-                text:"Customer Service",
-                link:"/admin/users/customer_service"
-            },
-            {
-                text:"Human Resource",
-                link:"/admin/users/hr"
-            },
-            {
-                text:"IT Support",
-                link:"/admin/users/it_support"
-            },
-        ]
+        link: "/admin/users",
+        // sub: [
+        //     {
+        //         text:"All Users",
+        //         link:"/admin/users"
+        //     },
+        //     {
+        //         text:"Unverified Users",
+        //         link:"/admin/users/unverified"
+        //     },
+        //     {
+        //         text:"Managers",
+        //         link:"/admin/users/managers"
+        //     },
+        //     {
+        //         text:"Customer Service",
+        //         link:"/admin/users/customer_service"
+        //     },
+        //     {
+        //         text:"Human Resource",
+        //         link:"/admin/users/hr"
+        //     },
+        //     {
+        //         text:"IT Support",
+        //         link:"/admin/users/it_support"
+        //     },
+        // ]
     },
     {
         icon: <Document />,
-        text: "Documents",
-        link: "/admin",
-        sub: [
-            {
-                text:"All Documents",
-                link:"/admin/documents"
-            },
-        ]
+        text: "Datasources",
+        link: "/admin/datasources",
+        // sub: [
+        //     {
+        //         text:"All Datasources",
+        //         link:"/admin/documents"
+        //     },
+        // ]
     },
     {
         icon: <Notes />,

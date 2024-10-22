@@ -20,10 +20,14 @@ import ITSupportList from "../pages/Admin/Users/ITSupport/index.jsx";
 import Roles from "../pages/Admin/Roles/index.jsx";
 import RoleEdit from "../pages/Admin/Roles/Edit/index.jsx";
 import Models from "../pages/Admin/Models/index.jsx";
-import Documents from "../pages/Admin/Documents/index.jsx";
+import Datasources from "../pages/Admin/Datasources/index.jsx";
 import UnverifiedList from "../pages/Admin/Users/UnverifiedUsers/index.jsx";
 import User from "../pages/User/index.jsx";
 import Profile from "../pages/User/Profile/index.jsx";
+import ModelEdit from "../pages/Admin/Models/Edit/index.jsx";
+import ModelAdd from "../pages/Admin/Models/Add/index.jsx";
+import RoleAdd from "../pages/Admin/Roles/Add/index.jsx";
+import DatasourceAdd from "../pages/Admin/Datasources/Add/index.jsx";
 
 const ScrollToTop = (props) => {
     const location = useLocation();
@@ -65,11 +69,20 @@ const Router = () => {
                                 <Route path="hr" element={<HRList />} />
                                 <Route path="it_support" element={<ITSupportList />} />
                             </Route>
-                            <Route path="roles" element={<Roles />} >
+                            <Route path="roles">
+                                <Route index element={<Roles />} />
+                                <Route path="add" element={<RoleAdd />} />
                                 <Route path="edit/:roleId" element={<RoleEdit />} />
                             </Route>
-                            <Route path="models" element={<Models />} />
-                            <Route path="documents" element={<Documents />} />
+                            <Route path="models">
+                                <Route index element={<Models />} />
+                                <Route path="add" element={<ModelAdd />} />
+                                <Route path="edit/:modelId" element={<ModelEdit />} />
+                            </Route>
+                            <Route path="datasources">
+                                <Route index element={<Datasources />} />
+                                <Route path="add" element={<DatasourceAdd />} />
+                            </Route>
                         </Route>
                     </Route>
                 </Routes>

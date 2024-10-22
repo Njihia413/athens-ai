@@ -3,67 +3,49 @@ import moment from "moment";
 import { ButtonIcon } from "../../../components";
 import { users } from "../../../store";
 import { PencilIcon, TrashIcon} from "@heroicons/react/24/outline";
-import  DataTable  from "../../../components/Datatable";
+import  DataTable2  from "../../../components/Datatable2";
 
 import { createColumnHelper } from "@tanstack/react-table";
 
 const columnHelper = createColumnHelper();
 
 const columns = [
-    columnHelper.accessor("name", {
-        header: (info) => "Name",
+    columnHelper.accessor("firstName", {
+        header: (info) => "First Name",
         cell: ({ row }) => {
             return (
                 <div className="flex items-center">
                     <div>
                         <span className="block text-slate-600 dark:text-slate-200 font-bold text-xs mb-1">
-                            {row.original.name}
+                            {row.original.firstName}
                         </span>
                     </div>
                 </div>
             );
         },
     }),
-    columnHelper.accessor("email", {
-        header: (info) => "Email Address",
+    columnHelper.accessor("middleName", {
+        header: (info) => "Middle Name",
         cell: ({ row }) => {
             return (
                 <div className="flex items-center">
                     <div>
-                       <span className="block text-slate-500 dark:text-slate-400 text-xs font-medium">
-                            {row.original.email}
+                        <span className="block text-slate-500 dark:text-slate-400 text-xs font-medium">
+                            {row.original.middleName}
                         </span>
                     </div>
                 </div>
             );
         },
     }),
-    columnHelper.accessor("nationalId", {
-        header: (info) => "National ID",
-        cell: (info) => {
-            return (
-                <>
-                    <span
-                        className={`block w-max text-xs font-bold ${
-                            info.getValue() === "Strater"
-                                ? "bg-gradient-to-r from-blue-600 to-pink-500 text-transparent bg-clip-text"
-                                : "text-slate-600 dark:text-slate-200"
-                        }`}
-                    >
-                        {info.getValue()}
-                    </span>
-                </>
-            );
-        },
-    }),
-    columnHelper.accessor("gender", {
-        header: (info) => "Gender",
+    columnHelper.accessor("lastName", {
+        header: (info) => "Last Name",
         cell: ({ row }) => {
             return (
                 <div className="flex items-center">
                     <div>
-                       <span className="block text-slate-500 dark:text-slate-400 text-xs font-medium">
-                            {row.original.gender}
+                        <span className="block text-slate-600 dark:text-slate-200 font-bold text-xs mb-1">
+                            {row.original.lastName}
                         </span>
                     </div>
                 </div>
@@ -71,7 +53,21 @@ const columns = [
         },
     }),
     columnHelper.accessor("joined", {
-        header: (info) => "Joined At",
+        header: (info) => "Date Joined",
+        cell: (info) => {
+            return (
+                <>
+                    <span
+                        className="block w-max text-xs font-bold text-slate-600 dark:text-slate-200"
+                    >
+                        {info.getValue()}
+                    </span>
+                </>
+            );
+        },
+    }),
+    columnHelper.accessor("lastLogin", {
+        header: (info) => "Last Login",
         cell: (info) => {
             const date = moment(info.getValue()).format("ll");
             const time = moment(info.getValue()).format("LT");
@@ -87,20 +83,7 @@ const columns = [
             );
         },
     }),
-    columnHelper.accessor("dob", {
-        header: (info) => "Date of Birth",
-        cell: (info) => {
-            return (
-                <>
-                    <span
-                        className="block w-max text-xs font-bold text-slate-600 dark:text-slate-200"
-                    >
-                        {info.getValue()}
-                    </span>
-                </>
-            );
-        },
-    }),
+
     columnHelper.accessor("status", {
         header: (info) => "Status",
         cell: (info) => {
@@ -122,9 +105,9 @@ const columns = [
                     <div
                         className={`inline-flex items-center px-3 py-1 rounded-full text-[11px] font-bold capitalize cursor-pointer
                         ${
-                            status == "verified"
+                            status == "active"
                                 ? "bg-emerald-100 dark:bg-emerald-950 text-emerald-500"
-                                : status == "unverified"
+                                : status == "inactive"
                                     ? "bg-rose-100 dark:bg-rose-950 text-rose-500"
                                     : "text-slate-500 bg-slate-100 dark:bg-slate-900"
                         }`}
@@ -141,13 +124,19 @@ const columns = [
                                     className="block px-4 py-2 text-sm text-slate-600 dark:text-slate-100 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-950"
                                     onClick={() => handleSelect("active")}
                                 >
-                                    Verify
+                                    Activate
                                 </div>
                                 <div
                                     className="block px-4 py-2 text-sm text-slate-600 dark:text-slate-100 cursor-pointer hover:bg-rose-100 dark:hover:bg-rose-950"
                                     onClick={() => handleSelect("inactive")}
                                 >
-                                    Unverify
+                                    Deactivate
+                                </div>
+                                <div
+                                    className="block px-4 py-2 text-sm text-slate-600 dark:text-slate-100 cursor-pointer hover:bg-yellow-100 dark:hover:bg-yellow-950" // Change the color for Archive
+                                    onClick={() => handleSelect("archive")} // Update the handleSelect function to archive
+                                >
+                                    Archive
                                 </div>
                             </div>
                         </div>
@@ -176,12 +165,12 @@ const columns = [
             const roleColors = {
                 "Customer Service": "bg-yellow-100 dark:bg-yellow-900 text-yellow-600",
                 "HR": "bg-purple-100 dark:bg-purple-900 text-purple-600",
-                "Manager": "bg-teal-100 dark:bg-teal-900 text-teal-600",
+                "Manager": "bg-lime-100 dark:bg-lime-900 text-lime-600", // Light green
                 "Finance": "bg-blue-100 dark:bg-blue-900 text-blue-600",
                 "IT Support": "bg-orange-100 dark:bg-orange-900 text-orange-600",
-                "Employee": "bg-green-100 dark:bg-green-900 text-green-600",  // New "Employee" role
                 "user": "bg-gray-100 dark:bg-gray-900 text-gray-600", // Default 'user' role
             };
+
 
             return (
                 <div className="relative inline-block text-left">
@@ -199,7 +188,7 @@ const columns = [
                     {isOpen && (
                         <div className="absolute mt-1 right-0 w-40 rounded-md shadow-lg bg-white dark:bg-slate-950 ring-1 ring-black ring-opacity-5 focus:outline-none z-20">
                             <div className="py-1">
-                                {["Customer Service", "HR", "Manager", "Finance", "IT Support", "Employee"].map((roleOption) => (
+                                {["Customer Service", "HR", "Manager", "Finance", "IT Support"].map((roleOption) => (
                                     <div
                                         key={roleOption}
                                         className={`block px-4 py-2 text-sm cursor-pointer capitalize ${roleColors[roleOption]} hover:opacity-80`}
@@ -252,7 +241,7 @@ const columns = [
 const UsersTable = () => {
     return (
         <>
-            <DataTable columns={columns} tableData={users} />
+            <DataTable2 columns={columns} tableData={users} />
         </>
     );
 }

@@ -1,42 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Section from "../../../../layout/global/Section.jsx";
 import Container from "../../../../layout/global/Container.jsx";
-import {Breadcrumbs, Button, Card, Input, Label} from "../../../../components/index.jsx";
+import {Breadcrumbs, Button, Card, Input, Label, Select} from "../../../../components/index.jsx";
 import {ArrowLeftIcon} from "@heroicons/react/24/outline/index.js";
 import Layout from "../../../../layout/dashboard/index.jsx";
 import {useParams} from "react-router-dom";
-import {roles} from "../../../../store/index.jsx";
+import {models} from "../../../../store/index.jsx";
 
-
-const RoleEdit = () => {
+const ModelEdit = () => {
     [];
-    const { roleId } = useParams();
+    const { modelId } = useParams();
 
-    const role = roles.filter((role) => role.id === roleId)[0];
+    const model = models.filter((model) => model.id === modelId)[0];
 
     return (
-        <Layout title={`Update - ${role.name}`}>
+        <Layout title={`Update - ${model.name}`}>
             <Section className="px-3 py-6">
                 <Container>
                     <div className="mb-7 flex justify-between items-center -mx-3">
                         <div className="px-3">
                             <h2 className="text-xl font-bold text-slate-700 dark:text-white mb-2">
-                                Edit Role Info
+                                Edit Model Info
                             </h2>
                             <Breadcrumbs
                                 items={[
                                     {
-                                        text: "All Roles",
-                                        link: "/admin/roles",
+                                        text: "All Models",
+                                        link: "/admin/models",
                                     },
-                                    { text: role.name },
+                                    { text: model.name },
                                 ]}
                             />
                         </div>
                         <div className="px-3">
                             <Button
                                 as="Link"
-                                to="/admin/roles"
+                                to="/admin/models"
                                 className="bg-slate-200 text-slate-600 hover:bg-blue-600 hover:text-white"
                             >
                                 <ArrowLeftIcon className="h-5 -mx-2 sm:mx-0 sm:h-4" />
@@ -51,7 +50,7 @@ const RoleEdit = () => {
                                 <span className="text-base text-slate-400 font-normal">
                                     Edit -{" "}
                                 </span>{" "}
-                                {role.name}
+                                {model.name}
                             </h2>
                         </div>
                         <div className="px-6 pt-5 pb-6 border-b border-slate-200 dark:border-slate-800">
@@ -59,15 +58,15 @@ const RoleEdit = () => {
                                 <div className="w-full lg:w-1/2 xl:w-2/5 px-3">
                                     <div className="py-2">
                                         <Label
-                                            htmlFor="roleid"
+                                            htmlFor="modelid"
                                             className="mb-2"
                                         >
-                                            Role ID
+                                            Model ID
                                         </Label>
                                         <Input
                                             disabled
-                                            defaultValue={role.id}
-                                            id="roleid"
+                                            defaultValue={model.id}
+                                            id="modelid"
                                         />
                                     </div>
                                 </div>
@@ -75,20 +74,20 @@ const RoleEdit = () => {
                                 <div className="w-full lg:w-1/2 xl:w-2/5 px-3">
                                     <div className="py-2">
                                         <Label
-                                            htmlFor="roleName"
+                                            htmlFor="modelName"
                                             className="mb-2"
                                         >
-                                            Role Name
+                                            Model Name
                                         </Label>
                                         <Input
-                                            defaultValue={role.name}
-                                            id="roleName"
+                                            defaultValue={model.name}
+                                            id="modelName"
                                         />
                                     </div>
                                 </div>
                                 <div className="w-full px-3 pb-2 pt-4">
                                     <Button className="bg-[#3a4df1] text-white hover:bg-blue-800">
-                                        Update Role
+                                        Update Model
                                     </Button>
                                 </div>
                             </div>
@@ -101,4 +100,4 @@ const RoleEdit = () => {
     )
 }
 
-export default RoleEdit;
+export default ModelEdit;
