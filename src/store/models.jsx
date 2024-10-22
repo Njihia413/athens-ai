@@ -1,19 +1,19 @@
 const data = [
     {
         id: "mid1",
-        name: "Mistral",
+        name: "Athens Alpha",
     },
     {
         id: "mid2",
-        name: "Llama 3.2",
+        name: "Athens Delphi",
     },
     {
         id: "mid3",
-        name: "GPT 4",
+        name: "Athens Heracles",
     },
     {
         id: "mid4",
-        name: "Gemini",
+        name: "Athens Helios",
     },
 ];
 

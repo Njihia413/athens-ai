@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Container from "../../global/Container";
-function Footer() {
+const Footer = () => {
     return (
         <>
-        
+
             <div className="isolate relative py-4 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
                 <Container>
                     <div className="flex items-center justify-between">

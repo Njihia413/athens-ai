@@ -14,9 +14,9 @@ const templatesNav = textTemplates
 const templatesExcerpt = JSON.parse(`{"sub":[${templatesNav}]}`);
 
 const menuData = [
-    { text: "Home", link: "/home" },
+    { text: "Home", link: "/guest" },
     { text: "About", link: "/about", },
-    { text: "Contact Us", link: "/contact" },
+    { text: "Contact Admin", link: "/contact" },
 ];
 
 const Menu = ({ mobile, className }) => {

@@ -372,37 +372,37 @@ const User = () => {
                                         <li>
                                             <div className="flex">
                                                 <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
-                                                       id="mistral" name="language-model" defaultChecked/>
+                                                       id="athens-alpha" name="language-model" defaultChecked/>
                                                 <label
                                                     className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
-                                                    htmlFor="mistral">Mistral</label>
+                                                    htmlFor="athens-alpha">Athens Alpha</label>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="flex">
                                                 <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
-                                                       id="Llama-3.2" name="language-model"/>
+                                                       id="athens-delphi" name="language-model"/>
                                                 <label
                                                     className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
-                                                    htmlFor="Llama-3">Llama-3.2</label>
+                                                    htmlFor="athens-delphi">Athens Delphi</label>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="flex">
                                                 <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
-                                                       id="gpt-4" name="language-model" />
+                                                       id="athens-heracles" name="language-model" />
                                                 <label
                                                     className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
-                                                    htmlFor="gpt-4">GPT 4</label>
+                                                    htmlFor="athens-heracles">Athens Heracles</label>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="flex">
                                                 <input className="appearance-none h-0 w-0 opacity-0 peer" type="radio"
-                                                       id="Gemini" name="language-model"/>
+                                                       id="athens-helios" name="language-model"/>
                                                 <label
                                                     className="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-200 font-medium text-sm border border-slate-200 dark:border-slate-800 rounded-md px-3 py-1 cursor-pointer peer-checked:cursor-default peer-checked:text-blue-600 peer-checked:border-blue-300 peer-checked:dark:border-blue-900 transition-all"
-                                                    htmlFor="Gemini">Gemini</label>
+                                                    htmlFor="athens-helios">Athens Helios</label>
                                             </div>
                                         </li>
                                     </ul>

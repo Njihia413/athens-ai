@@ -23,6 +23,7 @@ import Models from "../pages/Admin/Models/index.jsx";
 import Documents from "../pages/Admin/Documents/index.jsx";
 import UnverifiedList from "../pages/Admin/Users/UnverifiedUsers/index.jsx";
 import User from "../pages/User/index.jsx";
+import Profile from "../pages/User/Profile/index.jsx";
 
 const ScrollToTop = (props) => {
     const location = useLocation();
@@ -44,7 +45,10 @@ const Router = () => {
                         <Route path="login" element={<Login />} />
                         <Route path="signup" element={<Signup />} />
                         <Route path="guest" element={<Guest />} />
-                        <Route path="user" element={<User />} />
+                        <Route path="user">
+                            <Route index element={<User />} />
+                            <Route path="profile" element={<Profile />} />
+                        </Route>
                         <Route path="otp" element={<OTPCode />} />
                         <Route path="forgot-password" element={<ForgotPassword />} />
                         <Route path="new-password" element={<NewPassword />} />
