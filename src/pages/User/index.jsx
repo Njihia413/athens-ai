@@ -314,37 +314,34 @@ const User = () => {
                                         </div>
                                         <div className="flex flex-col gap-6">
                                             <div className="">
-                                                <h5 className="font-bold text-sm mb-3 text-slate-700 dark:text-slate-100">Lets try</h5>
+                                                <h5 className="font-bold text-sm mb-3 text-slate-700 dark:text-slate-100">Prompt Assist</h5>
                                                 <div
                                                     className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
                                                     <div
                                                         className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Plan
-                                                            a trip</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">I
-                                                            have 4 days holiday from my job so plan paris trip for
-                                                            me.</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Summary</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">
+                                                            Ask Athens AI to summarize a document for you
+                                                        </p>
                                                     </div>
                                                     <div
                                                         className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Write
-                                                            Code for me</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Can
-                                                            you write a tiktak game for me in react js.</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Article</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">
+                                                            Ask Athens AI to generate a well-researched article on any topic of your choice, tailored to your needs.
+                                                        </p>
                                                     </div>
                                                     <div
                                                         className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Article
-                                                            writing</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Write
-                                                            me an article for a tailwind blog post.</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Images</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">
+                                                            Request Athens AI to generate custom images or enhance your visual content with AI-powered creativity.
+                                                        </p>
                                                     </div>
                                                     <div
                                                         className="hidden px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Give
-                                                            me advice</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell
-                                                            me how to work with tough deadlines</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Topic Modelling</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -354,13 +351,17 @@ const User = () => {
                                                     className="grid grid-flow-dense sm:grid-cols-2 md:grid-cols-3 gap-5">
                                                     <div
                                                         className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Give me advice</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Tell me how to work with tough deadlines</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Research Assistance</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">
+                                                            Let Athens AI assist in gathering and summarizing research from multiple sources
+                                                        </p>
                                                     </div>
                                                     <div
                                                         className="px-4 py-3 rounded-md bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Surprise Me</h6>
-                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">Come up with anything that you think could put me in a good mood</p>
+                                                        <h6 className="font-bold text-base mb-1 text-slate-600 dark:text-slate-100">Speech to Text</h6>
+                                                        <p className="text-sm line-clamp-1 text-slate-500 dark:text-slate-300">
+                                                            Convert audio or spoken words into text with high accuracy using Athens AI’s speech-to-text capabilities
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>

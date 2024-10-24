@@ -28,6 +28,8 @@ import ModelEdit from "../pages/Admin/Models/Edit/index.jsx";
 import ModelAdd from "../pages/Admin/Models/Add/index.jsx";
 import RoleAdd from "../pages/Admin/Roles/Add/index.jsx";
 import DatasourceAdd from "../pages/Admin/Datasources/Add/index.jsx";
+import About from "../pages/About/index.jsx";
+import Contact from "../pages/Contact/index.jsx";
 
 const ScrollToTop = (props) => {
     const location = useLocation();
@@ -49,6 +51,8 @@ const Router = () => {
                         <Route path="login" element={<Login />} />
                         <Route path="signup" element={<Signup />} />
                         <Route path="guest" element={<Guest />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="contact" element={<Contact />} />
                         <Route path="user">
                             <Route index element={<User />} />
                             <Route path="profile" element={<Profile />} />

@@ -10,10 +10,10 @@ function RecentDocument() {
             <div className="flex flex-col isolate relative">
                 <div className="p-5 flex justify-between items-center gap-x-4">
                     <h6 className="text-md font-bold text-slate-700 dark:text-white">
-                        Recent Documents
+                        Recent Datasources
                     </h6>
                     <Link
-                        to="/admin/documents"
+                        to="/admin/datasources"
                         className="font-medium text-sm text-blue-600 hover:text-blue-800"
                     >
                         View All
@@ -24,7 +24,7 @@ function RecentDocument() {
                         <thead className="text-slate-600 dark:text-slate-200">
                             <tr>
                                 <th className="text-start px-5 py-2">
-                                    Document
+                                    Datasource
                                 </th>
                                 {/*<th className="text-start px-5 py-2">Created</th>*/}
                                 <th className="sticky end-0 bg-white dark:bg-slate-950"></th>

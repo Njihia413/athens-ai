@@ -29,39 +29,39 @@ const AdminDashboard = () => {
                                 title="New Users"
                                 accent
                                 data={{
-                                    thisMonth: "487",
-                                    lastMonth: "225",
-                                    thisYear: "187500",
+                                    thisMonth: "27",
+                                    lastMonth: "15",
+                                    thisYear: "500",
                                 }}
                             />
                         </div>
                         <div className="w-full xs:w-1/2 lg:w-1/4 p-3">
                             <InfoTiles
-                                title="New Subscribers"
+                                title="New Errors"
                                 data={{
-                                    thisMonth: "78",
-                                    lastMonth: "124",
+                                    thisMonth: "10",
+                                    lastMonth: "24",
                                     thisYear: "759",
                                 }}
                             />
                         </div>
                         <div className="w-full xs:w-1/2 lg:w-1/4 p-3">
                             <InfoTiles
-                                title="Total Income"
+                                title="Total Queries"
                                 data={{
-                                    thisMonth: "$17855",
-                                    lastMonth: "$822",
-                                    thisYear: "$87042",
+                                    thisMonth: "22",
+                                    lastMonth: "55",
+                                    thisYear: "42",
                                 }}
                             />
                         </div>
                         <div className="w-full xs:w-1/2 lg:w-1/4 p-3">
                             <InfoTiles
-                                title="Total Spending"
+                                title="Total Datasources"
                                 data={{
-                                    thisMonth: "$856",
-                                    lastMonth: "$227",
-                                    thisYear: "$11510",
+                                    thisMonth: "56",
+                                    lastMonth: "37",
+                                    thisYear: "10",
                                 }}
                             />
                         </div>
@@ -77,11 +77,11 @@ const AdminDashboard = () => {
                             <div className="flex flex-col isolate relative">
                                 <div className="p-5 pb-2">
                                     <h6 className="text-md font-bold text-slate-700 dark:text-white mb-1">
-                                        Usage Overview
+                                        Logs Overview
                                     </h6>
                                     <span className="block text-slate-500 dark:text-slate-400 text-[11px] font-medium">
-                                            By Words per day
-                                        </span>
+                                            Per day
+                                    </span>
                                 </div>
                                 <div className="h-48 w-full px-5 pb-1">
                                     <UsageOverviewChart/>
